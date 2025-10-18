@@ -1,3 +1,10 @@
 /Users/harshrajsingh/eclipse-workspace/R1/src/test/java/Hook/ApplicationHooks.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/test/java/runners/CartRunner.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/test/java/runners/ContactUsRunner.java
 /Users/harshrajsingh/eclipse-workspace/R1/src/test/java/runners/LoginRunner.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/test/java/runners/ProductRunner.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/test/java/stepDefinitons/CartFeature.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/test/java/stepDefinitons/CommonSteps.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/test/java/stepDefinitons/ContactUsFeature.java
 /Users/harshrajsingh/eclipse-workspace/R1/src/test/java/stepDefinitons/LoginFeature.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/test/java/stepDefinitons/ProductFeature.java

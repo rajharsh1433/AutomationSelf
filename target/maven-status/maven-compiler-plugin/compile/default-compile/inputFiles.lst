@@ -1,2 +1,12 @@
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/Pages/AccountRegistration.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/Pages/AllProductPage.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/Pages/ContactUsPage.java
 /Users/harshrajsingh/eclipse-workspace/R1/src/main/java/Pages/HomePage.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/Pages/ProductDetails.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/Pages/ViewCartPage.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/utils/ExtentReportManager.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/utils/ExtentTestManager.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/utils/ScreenShotUtils.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/utils/StringUtilityFnc.java
+/Users/harshrajsingh/eclipse-workspace/R1/src/main/java/utils/Waits.java
 /Users/harshrajsingh/eclipse-workspace/R1/src/main/java/utils/WebDriverFactory.java
