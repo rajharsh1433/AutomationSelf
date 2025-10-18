@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/10/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 07 19:14:11 IST 2025</td>
+<td>Started on:</td><td>Sat Oct 18 20:16:07 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>553 seconds (553572 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (345 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,77 +76,125 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.CartRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CartRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Place order: Login before checkout", "CartFunctionality"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;21.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d521437c7ef0877c80d68cb8848d7bc1, clickElement {id=f.0F41CEB9EBA4381EF220A8F25E59E294.d.690A8C633E130D7F02F1FA8FD5D740CB.e.33}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49881}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49881/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (d521437c7ef0877c80d68cb8848d7bc1)] -&gt; css selector: button[data-qa=&apos;login-button&apos;]]
-Session ID: d521437c7ef0877c80d68cb8848d7bc1
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at Pages.HomePage.clicksloginbutton(HomePage.java:73)
-	at stepDefinitons.CartFeature.login_method(CartFeature.java:57)
-	at ✽.enters email,password, and clcik on login button(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:18)
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-</pre></div><a href='#' onClick='toggleBox("stack-trace779166731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace779166731'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;21.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d521437c7ef0877c80d68cb8848d7bc1, clickElement {id=f.0F41CEB9EBA4381EF220A8F25E59E294.d.690A8C633E130D7F02F1FA8FD5D740CB.e.33}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49881}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49881/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (d521437c7ef0877c80d68cb8848d7bc1)] -&gt; css selector: button[data-qa=&apos;login-button&apos;]]
-Session ID: d521437c7ef0877c80d68cb8848d7bc1
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at Pages.HomePage.clicksloginbutton(HomePage.java:73)
-	at stepDefinitons.CartFeature.login_method(CartFeature.java:57)
-	at ✽.enters email,password, and clcik on login button(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:18)
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful User Registration", "Login/SignUp page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace201392112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace201392112'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
 </pre></div></td>
-<td>343</td>
-<td>runners.CartRunner@3a52dba3</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
 <tr>
-<td title='runners.CartRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CartRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add Products in Cart", "CartFunctionality"</td>
-<td></td>
-<td>209</td>
-<td>runners.CartRunner@3a52dba3</td></tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login user with correct email and password", "Login/SignUp page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1366722422", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1366722422'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify All products and product details page", "Products"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Product.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1835778392", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1835778392'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Product.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful Navigation to SignUp page", "Login/SignUp page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1736293769", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1736293769'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Registration using existing email", "Login/SignUp page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace12139181", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace12139181'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Subscription in home page", "Login/SignUp page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace792488644", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace792488644'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit Contact Us Form Successfully", "Contact Us Page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/ContactUs.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace55755528", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace55755528'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/ContactUs.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search Product", "Products"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Product.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace268599241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace268599241'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Product.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Place order: Login before checkout", "CartFunctionality"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace380616082", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace380616082'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
+<tr>
+<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add Products in Cart", "CartFunctionality"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1091781053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1091781053'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;utils.WebDriverFactory.getDriver()&quot; is null
+	at stepDefinitons.CommonSteps.user_is_on_automationexercise_com_page(CommonSteps.java:15)
+	at ✽.user is on automationexercise.com page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runners.LoginRunner@7d20d0b</td></tr>
 </table><p>
 </body>
 </html>

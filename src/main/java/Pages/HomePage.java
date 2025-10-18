@@ -86,7 +86,7 @@ public class HomePage {
 		return "New User Signup!".equals(text.trim());
 	}
 	public boolean verifyErrorMessage() {
-		String text = driver.findElement(errorValidationText).getText();
+		String text = wait.waitForVisibility(driver,errorValidationText).getText();
 		return "Email Address already exist!".equals(text.trim());
 	}
 	public void ContactUsPageNavigation() {

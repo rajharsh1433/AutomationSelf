@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import utils.StringUtilityFnc;
+import utils.Waits;
 import utils.WebDriverFactory;
 
 public class ViewCartPage {
@@ -20,6 +21,7 @@ public class ViewCartPage {
 	}
 	
 	StringUtilityFnc suf = new StringUtilityFnc(WebDriverFactory.getDriver()); 
+    Waits wait = new Waits();
 	
 	//private By productlist = By.xpath(".//table[@id='cart_info_table']//tbody//tr");
 	private By checkoutpage = By.linkText("Proceed To Checkout");
@@ -103,8 +105,9 @@ public class ViewCartPage {
 		subbtn.click();
 	}
 	public Boolean messageVerification(String text) {
-		WebElement ordertxt = driver.findElement(ordercnfmssg);
-		String actualtext = ordertxt.getText();
+		//WebElement ordertxt = driver.findElement(ordercnfmssg);
+		
+		String actualtext = wait.waitForVisibility(driver,ordercnfmssg).getText();
 		if(actualtext.equalsIgnoreCase(text)) {
 			return true;
 		}

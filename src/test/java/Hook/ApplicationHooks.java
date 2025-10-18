@@ -1,5 +1,7 @@
 package Hook;  // ⚠️ use lowercase for package names (Java convention)
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
@@ -19,7 +21,7 @@ public class ApplicationHooks {
    // private ExtentReportManager erm = new ExtentReportManager();
 
     @Before
-    public static void beforeScenario(Scenario scenario) {
+	public static void beforeScenario(Scenario scenario) {
         // Initialize driver
        
         WebDriverFactory.initDriver("chrome");
@@ -31,9 +33,9 @@ public class ApplicationHooks {
         ExtentTestManager.getTest().log(Status.INFO, "Scenario started: " + testName);
     }
 
-    @SuppressWarnings({ "static-access" })
-	@After
-    public static void afterScenario(Scenario scenario) {
+    @After
+	@SuppressWarnings({ "static-access" })
+	public static void afterScenario(Scenario scenario) {
         if (scenario.isFailed()) {
             String screenshotPath = screenshotUtils.captureScreenshot(driver, scenario.getName());
             ExtentTestManager.getTest().log(Status.FAIL, "Scenario failed: " + scenario.getName());
