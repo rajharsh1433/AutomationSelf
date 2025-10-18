@@ -1,11 +1,21 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven' // Name from Global Tool Configuration
+    environment {
+        // Add Maven to PATH so Jenkins can find it
+        PATH = "/Users/harshrajsingh/apache-maven-3.9.11/bin:${env.PATH}"
     }
 
     stages {
+        stage('Env Check') {
+            steps {
+                echo "Checking environment..."
+                sh 'echo $PATH'
+                sh 'which mvn'
+                sh 'java -version'
+            }
+        }
+
         stage('Checkout Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/rajharsh1433/AutomationSelf.git'
@@ -29,6 +39,12 @@ pipeline {
     post {
         always {
             echo 'Build completed'
+        }
+        success {
+            echo 'Build succeeded!'
+        }
+        failure {
+            echo 'Build failed!'
         }
     }
 }
