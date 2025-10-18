@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven' // Name from Global Tool Configuration
+    }
+
     stages {
         stage('Checkout Code') {
             steps {
@@ -10,7 +14,6 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                // Run Maven tests for Selenium
                 sh 'mvn clean test'
             }
         }
