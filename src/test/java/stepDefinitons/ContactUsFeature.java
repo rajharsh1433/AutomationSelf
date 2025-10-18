@@ -31,7 +31,7 @@ public class ContactUsFeature {
 	}
 	@When("the user enters name,email, subject, and message")
 	public void enter_the_details() {
-		contactpage.enterDetails("Harsh Raj Singh", "testemail@gmail.com", "Testing Purpose", "Testing Purpose");
+		contactpage.enterDetails("Harsh Raj Singh", "testemail1234@gmail.com", "Testing Purpose", "Testing Purpose");
 	}
 	@When("the user uploads a file")
 	public void file_upload() {

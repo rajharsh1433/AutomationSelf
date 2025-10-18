@@ -38,7 +38,7 @@ public class LoginFeature {
     @When("user enters name and email")
     public void user_enters_name_and_email() {
         homepage.enterSignUpName("Harsh Raj Singh");
-        homepage.enterSignupEmail("rajharsh1466831@gmail.com");
+        homepage.enterSignupEmail("rajharsh146687831@gmail.com");
     }
 
     @When("clicks on Signup button")
@@ -108,7 +108,7 @@ public class LoginFeature {
     }
     @Then("user enters correct email and password")
     public void user_enter_loginDetails() {
-    	homepage.enterlogindetails("rajharsh1466831@gmail.com", "India1234");
+    	homepage.enterlogindetails("rajharsh146687831@gmail.com", "India1234");
     }
     @When("clicks on Login button")
     public void user_clicks_loginbttn() {
