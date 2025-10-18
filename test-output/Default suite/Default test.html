@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 18 20:06:02 IST 2025</td>
+<td>Started on:</td><td>Tue Oct 07 19:14:11 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>60 seconds (60608 ms)</td>
+<tr><td>Total time:</td><td>553 seconds (553572 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,59 +76,63 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful Navigation to SignUp page", "Login/SignUp page"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //b[normalize-space()=&apos;Enter Account Information&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+<td title='runners.CartRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CartRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Place order: Login before checkout", "CartFunctionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;21.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65058}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65058/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 547c0a0907c7bec63ccb64044828af38
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepDefinitons.LoginFeature.user_lands_on_enter_account_information_page(LoginFeature.java:57)
-	at ✽.user lands on Enter Account Information page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1933224408", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1933224408'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //b[normalize-space()=&apos;Enter Account Information&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Command: [d521437c7ef0877c80d68cb8848d7bc1, clickElement {id=f.0F41CEB9EBA4381EF220A8F25E59E294.d.690A8C633E130D7F02F1FA8FD5D740CB.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49881}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49881/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (d521437c7ef0877c80d68cb8848d7bc1)] -&gt; css selector: button[data-qa=&apos;login-button&apos;]]
+Session ID: d521437c7ef0877c80d68cb8848d7bc1
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at Pages.HomePage.clicksloginbutton(HomePage.java:73)
+	at stepDefinitons.CartFeature.login_method(CartFeature.java:57)
+	at ✽.enters email,password, and clcik on login button(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:18)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div><a href='#' onClick='toggleBox("stack-trace779166731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace779166731'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;21.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65058}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65058/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 547c0a0907c7bec63ccb64044828af38
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepDefinitons.LoginFeature.user_lands_on_enter_account_information_page(LoginFeature.java:57)
-	at ✽.user lands on Enter Account Information page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:11)
+Command: [d521437c7ef0877c80d68cb8848d7bc1, clickElement {id=f.0F41CEB9EBA4381EF220A8F25E59E294.d.690A8C633E130D7F02F1FA8FD5D740CB.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49881}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49881/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (d521437c7ef0877c80d68cb8848d7bc1)] -&gt; css selector: button[data-qa=&apos;login-button&apos;]]
+Session ID: d521437c7ef0877c80d68cb8848d7bc1
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at Pages.HomePage.clicksloginbutton(HomePage.java:73)
+	at stepDefinitons.CartFeature.login_method(CartFeature.java:57)
+	at ✽.enters email,password, and clcik on login button(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/Cart.feature:18)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
-<td>16</td>
-<td>runners.LoginRunner@ba2f4ec</td></tr>
-<tr>
-<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful User Registration", "Login/SignUp page"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //b[normalize-space()=&apos;Enter Account Information&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;21.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65168/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b3655cc618ff9cd3d600b6f8b8ae133d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepDefinitons.LoginFeature.user_lands_on_enter_account_information_page(LoginFeature.java:57)
-	at stepDefinitons.LoginFeature.user_is_on_AccountRegistrationPage(LoginFeature.java:72)
-	at ✽.user is on Account registration page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:15)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1402599109", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1402599109'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //b[normalize-space()=&apos;Enter Account Information&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;21.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: /var/folders/r3/1k1w1jwd2dj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65168/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b3655cc618ff9cd3d600b6f8b8ae133d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepDefinitons.LoginFeature.user_lands_on_enter_account_information_page(LoginFeature.java:57)
-	at stepDefinitons.LoginFeature.user_is_on_AccountRegistrationPage(LoginFeature.java:72)
-	at ✽.user is on Account registration page(file:///Users/harshrajsingh/eclipse-workspace/R1/src/test/java/features/login.feature:15)
-</pre></div></td>
-<td>29</td>
-<td>runners.LoginRunner@ba2f4ec</td></tr>
+<td>343</td>
+<td>runners.CartRunner@3a52dba3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -139,15 +143,10 @@ Session ID: b3655cc618ff9cd3d600b6f8b8ae133d
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Registration using existing email", "Login/SignUp page"</td>
+<td title='runners.CartRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CartRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add Products in Cart", "CartFunctionality"</td>
 <td></td>
-<td>6</td>
-<td>runners.LoginRunner@ba2f4ec</td></tr>
-<tr>
-<td title='runners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login user with correct email and password", "Login/SignUp page"</td>
-<td></td>
-<td>7</td>
-<td>runners.LoginRunner@ba2f4ec</td></tr>
+<td>209</td>
+<td>runners.CartRunner@3a52dba3</td></tr>
 </table><p>
 </body>
 </html>

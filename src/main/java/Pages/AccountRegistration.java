@@ -15,10 +15,8 @@ public class AccountRegistration {
     private By maletitle = By.id("id_gender1");
     private By femaletitle = By.id("id_gender2");
     private By password = By.id("password");
-
     private By Newsletter = By.id("newsletter");
     private By optin = By.id("optin"); // corrected typo
-
     private By First_Name = By.id("first_name");
     private By last_Name = By.id("last_name");
     private By company = By.id("company");

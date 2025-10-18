@@ -18,7 +18,7 @@ public class WebDriverFactory {
 	/**
 	 * Initalizing webdrivers based on names
 	 */
-	public WebDriver initDriver(String browser) {
+	public static WebDriver initDriver(String browser) {
 		System.out.println("Launching browsers: "+browser);
 		
 		if(browser.equalsIgnoreCase("chrome")) {
@@ -60,7 +60,7 @@ public class WebDriverFactory {
 	/**
 	 * Quit the driver and remove it from thread loal
 	 */
-	public  void quitDriver() {
+	public  static void quitDriver() {
 		if(getDriver()!=null) {
 			getDriver().quit();
 			tlDriver.remove();

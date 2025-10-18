@@ -34,5 +34,10 @@ Feature: Login/SignUp page
     	When user enters name and email
     	And clicks on Signup button
     	Then error Email Already Exists is visible
+    	
+    Scenario: Verify Subscription in home page
+    	When user scrolls down to footer, susbcription text is visible
+    	And user enters email id and click arrow button
+    	Then success messge you have been successfully subscribed is visible
        
        

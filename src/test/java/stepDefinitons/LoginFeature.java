@@ -18,19 +18,14 @@ public class LoginFeature {
 
     private HomePage homepage;
     private AccountRegistration accreg;
-
     
 
-    @Given("user is on automationexercise.com page")
-    public void user_is_on_automationexercise_com_page() {
-        WebDriverFactory.getDriver().get("https://www.automationexercise.com/");
-        homepage = new HomePage(WebDriverFactory.getDriver());
-        
-    }
 
     @When("user clicks on SignupLogin button")
     public void user_clicks_on_signup_login_button() {
+    	homepage = new HomePage(WebDriverFactory.getDriver());
         homepage.LoginSignUp();
+        
     }
 
     @Then("user lands on SignupLogin joint page")
@@ -43,7 +38,7 @@ public class LoginFeature {
     @When("user enters name and email")
     public void user_enters_name_and_email() {
         homepage.enterSignUpName("Harsh Raj Singh");
-        homepage.enterSignupEmail("rajharsh1433@gmail.com");
+        homepage.enterSignupEmail("rajharsh1466831@gmail.com");
     }
 
     @When("clicks on Signup button")
@@ -64,7 +59,7 @@ public class LoginFeature {
 
     @Given("user is on Account registration page")
     public void user_is_on_AccountRegistrationPage() {
-        user_is_on_automationexercise_com_page();
+        //user_is_on_automationexercise_com_page();
         user_clicks_on_signup_login_button();
         user_lands_on_signup_login_joint_page();
         user_enters_name_and_email();
@@ -113,7 +108,7 @@ public class LoginFeature {
     }
     @Then("user enters correct email and password")
     public void user_enter_loginDetails() {
-    	homepage.enterlogindetails("rajharsh1433@gmail.com", "India1234");
+    	homepage.enterlogindetails("rajharsh1466831@gmail.com", "India1234");
     }
     @When("clicks on Login button")
     public void user_clicks_loginbttn() {
@@ -135,4 +130,19 @@ public class LoginFeature {
     	Assert.assertTrue(homepage.verifyErrorMessage());
     }
     
+    @When("user scrolls down to footer, susbcription text is visible")
+    public void subsrciption_validation() {
+    	homepage = new HomePage(WebDriverFactory.getDriver());
+    	String text = homepage.subscriptiontextvalidation();
+    	Assert.assertTrue(text.equalsIgnoreCase("Subscription"));
+    }
+    @When("user enters email id and click arrow button")
+    public void enters_email_clicksbttn() {
+    	homepage.enterdetails("raj76464@gmail.com");
+    }
+    @Then("success messge you have been successfully subscribed is visible")
+    public void success_mssg_validation() {
+    	String text = homepage.successmessage();
+    	Assert.assertTrue(text.equalsIgnoreCase("You have been successfully subscribed!"));
+    }
 }

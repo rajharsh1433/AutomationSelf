@@ -6,10 +6,13 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utils.Waits;
 import utils.WebDriverFactory;
+import org.openqa.selenium.JavascriptExecutor;
 
 
 
@@ -20,6 +23,7 @@ public class HomePage {
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 	}
+	Waits wait = new Waits();
 	private By  SignUpLoginBtn = By.cssSelector("a[href='/login']");
 	private By  signupEmail = By.cssSelector("input[data-qa='signup-email']");
 	private By  signupName = By.cssSelector("input[data-qa='signup-name']");
@@ -29,6 +33,13 @@ public class HomePage {
 	private By loginbutton = By.cssSelector("button[data-qa='login-button']");
 	private By  SignupText = By.cssSelector("div[class='signup-form'] h2");
 	private By  errorValidationText = By.xpath("//p[normalize-space()='Email Address already exist!']");
+	private By  contactUspage = By.cssSelector("a[href='/contact_us']");
+	private By productpage = By.cssSelector("a[href='/products']");
+	private By subscriptiontext = By.xpath("//div[@class='single-widget']/h2");
+	private By subsemail = By.id("susbscribe_email");
+	private By subsbttn = By.xpath("//i[@class='fa fa-arrow-circle-o-right']");
+	private By successtext = By.xpath("//div[@class='alert-success alert']");
+	
 	//private By verifcation = By.xpath("//li[10]//a[1]");
 	
 	//Navigates user to LoginSign up page
@@ -62,15 +73,12 @@ public class HomePage {
 		driver.findElement(loginbutton).click();
 	}
 	//Verifying the login message
-	public void verification(String username) {
-		WebDriverWait wait = new WebDriverWait(WebDriverFactory.getDriver(), Duration.ofSeconds(20));
-        String text = wait.until(
-            ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b")
-            )
-        ).getText();
-        System.out.println(text);
-        
+	public boolean verification(String username) {
+        String text = wait.waitForVisibility(driver,By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b")).getText();
+        if(username.equalsIgnoreCase(text)) {
+        	return true;
+        }
+        return false;  
 	}
 	
 	public boolean verifyNewuserSignup() {
@@ -81,5 +89,26 @@ public class HomePage {
 		String text = driver.findElement(errorValidationText).getText();
 		return "Email Address already exist!".equals(text.trim());
 	}
-
+	public void ContactUsPageNavigation() {
+		driver.findElement(contactUspage).click();
+	}
+	public void productPageNavigation() {
+		driver.findElement(productpage).click(); 
+	}
+	public String subscriptiontextvalidation() {
+		WebElement substext = driver.findElement(subscriptiontext);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		//scrolling down to the page until the element is visible
+		js.executeScript("arguments[0].scrollIntoView()", substext);
+		String text = substext.getText();
+		return text;
+	}
+	public void enterdetails(String email) {
+		driver.findElement(subsemail).sendKeys(email);
+		driver.findElement(subsbttn).click();
+	}
+	public String successmessage() {
+		String text = driver.findElement(successtext).getText();
+		return text;
+	}
 }
