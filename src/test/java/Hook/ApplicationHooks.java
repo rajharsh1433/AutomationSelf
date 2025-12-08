@@ -1,7 +1,5 @@
 package Hook;  // ⚠️ use lowercase for package names (Java convention)
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
